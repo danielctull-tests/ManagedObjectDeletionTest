@@ -18,7 +18,65 @@
 		2442D776192CE68C00147117 /* _Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442D770192CE68C00147117 /* _Event.m */; };
 		2442D777192CE68C00147117 /* _Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442D772192CE68C00147117 /* _Group.m */; };
 		2442D778192CE68C00147117 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442D774192CE68C00147117 /* Group.m */; };
+		2442D77A192CE6D100147117 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442D779192CE6D100147117 /* iPhone.storyboard */; };
+		2442D77D192CE79600147117 /* GroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442D77C192CE79600147117 /* GroupsViewController.m */; };
+		2442D786192CE81300147117 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442D785192CE81300147117 /* EventsViewController.m */; };
+		2442D789192CE82000147117 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442D788192CE82000147117 /* EventViewController.m */; };
+		2442D7A5192CE92100147117 /* libDCTCoreDataStack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2442D792192CE91000147117 /* libDCTCoreDataStack.a */; };
+		2442D7A6192CE92100147117 /* libDCTDataSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2442D7A0192CE91600147117 /* libDCTDataSource.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2442D791192CE91000147117 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2442D78A192CE91000147117 /* DCTCoreDataStack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2437B68D15B97C2600750117;
+			remoteInfo = DCTCoreDataStack;
+		};
+		2442D793192CE91000147117 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2442D78A192CE91000147117 /* DCTCoreDataStack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2468705C18525E9200ADB152;
+			remoteInfo = "DCTCoreDataStack-OSX";
+		};
+		2442D795192CE91000147117 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2442D78A192CE91000147117 /* DCTCoreDataStack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 24F6EC00158A261000CEDD41;
+			remoteInfo = DCTCoreDataStackTests;
+		};
+		2442D797192CE91000147117 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2442D78A192CE91000147117 /* DCTCoreDataStack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 24E91B5715BEB1FA00E0DB54;
+			remoteInfo = "DCTCoreDataStack Demo";
+		};
+		2442D79F192CE91600147117 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2442D799192CE91600147117 /* DCTDataSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2437B77D15B97FA900750117;
+			remoteInfo = DCTDataSource;
+		};
+		2442D7A1192CE91600147117 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2442D799192CE91600147117 /* DCTDataSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 24AF7A90187AFE0B0091AD00;
+			remoteInfo = "DCTDataSource Demo";
+		};
+		2442D7A3192CE91600147117 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2442D799192CE91600147117 /* DCTDataSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 248CC940189ECB4A009E2F6C;
+			remoteInfo = "DCTDataSource Tests";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2442D724192CE01D00147117 /* ManagedObjectDeletionTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManagedObjectDeletionTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +98,15 @@
 		2442D772192CE68C00147117 /* _Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Group.m; sourceTree = "<group>"; };
 		2442D773192CE68C00147117 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		2442D774192CE68C00147117 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		2442D779192CE6D100147117 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		2442D77B192CE79600147117 /* GroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupsViewController.h; sourceTree = "<group>"; };
+		2442D77C192CE79600147117 /* GroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupsViewController.m; sourceTree = "<group>"; };
+		2442D784192CE81300147117 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		2442D785192CE81300147117 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		2442D787192CE82000147117 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		2442D788192CE82000147117 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		2442D78A192CE91000147117 /* DCTCoreDataStack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DCTCoreDataStack.xcodeproj; path = DCTCoreDataStack/DCTCoreDataStack.xcodeproj; sourceTree = "<group>"; };
+		2442D799192CE91600147117 /* DCTDataSource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DCTDataSource.xcodeproj; path = DCTDataSource/DCTDataSource.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2442D7A5192CE92100147117 /* libDCTCoreDataStack.a in Frameworks */,
+				2442D7A6192CE92100147117 /* libDCTDataSource.a in Frameworks */,
 				2442D72A192CE01D00147117 /* CoreGraphics.framework in Frameworks */,
 				2442D72C192CE01D00147117 /* UIKit.framework in Frameworks */,
 				2442D728192CE01D00147117 /* Foundation.framework in Frameworks */,
@@ -76,6 +145,8 @@
 		2442D726192CE01D00147117 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2442D78A192CE91000147117 /* DCTCoreDataStack.xcodeproj */,
+				2442D799192CE91600147117 /* DCTDataSource.xcodeproj */,
 				2442D727192CE01D00147117 /* Foundation.framework */,
 				2442D729192CE01D00147117 /* CoreGraphics.framework */,
 				2442D72B192CE01D00147117 /* UIKit.framework */,
@@ -94,6 +165,13 @@
 				2442D733192CE01D00147117 /* main.m */,
 				2442D768192CE0FC00147117 /* Model.xcdatamodeld */,
 				2442D76B192CE68C00147117 /* Model */,
+				2442D779192CE6D100147117 /* iPhone.storyboard */,
+				2442D77B192CE79600147117 /* GroupsViewController.h */,
+				2442D77C192CE79600147117 /* GroupsViewController.m */,
+				2442D784192CE81300147117 /* EventsViewController.h */,
+				2442D785192CE81300147117 /* EventsViewController.m */,
+				2442D787192CE82000147117 /* EventViewController.h */,
+				2442D788192CE82000147117 /* EventViewController.m */,
 			);
 			path = ManagedObjectDeletionTest;
 			sourceTree = "<group>";
@@ -119,6 +197,27 @@
 				2442D772192CE68C00147117 /* _Group.m */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		2442D78B192CE91000147117 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2442D792192CE91000147117 /* libDCTCoreDataStack.a */,
+				2442D794192CE91000147117 /* libDCTCoreDataStack-OSX.a */,
+				2442D796192CE91000147117 /* DCTCoreDataStackTests.octest */,
+				2442D798192CE91000147117 /* CoreDataStack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2442D79A192CE91600147117 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2442D7A0192CE91600147117 /* libDCTDataSource.a */,
+				2442D7A2192CE91600147117 /* DCTDataSource Demo.app */,
+				2442D7A4192CE91600147117 /* DCTDataSource Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +259,16 @@
 			mainGroup = 2442D71B192CE01D00147117;
 			productRefGroup = 2442D725192CE01D00147117 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2442D78B192CE91000147117 /* Products */;
+					ProjectRef = 2442D78A192CE91000147117 /* DCTCoreDataStack.xcodeproj */;
+				},
+				{
+					ProductGroup = 2442D79A192CE91600147117 /* Products */;
+					ProjectRef = 2442D799192CE91600147117 /* DCTDataSource.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2442D723192CE01D00147117 /* ManagedObjectDeletionTest */,
@@ -167,12 +276,65 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		2442D792192CE91000147117 /* libDCTCoreDataStack.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDCTCoreDataStack.a;
+			remoteRef = 2442D791192CE91000147117 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2442D794192CE91000147117 /* libDCTCoreDataStack-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libDCTCoreDataStack-OSX.a";
+			remoteRef = 2442D793192CE91000147117 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2442D796192CE91000147117 /* DCTCoreDataStackTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DCTCoreDataStackTests.octest;
+			remoteRef = 2442D795192CE91000147117 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2442D798192CE91000147117 /* CoreDataStack.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CoreDataStack.app;
+			remoteRef = 2442D797192CE91000147117 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2442D7A0192CE91600147117 /* libDCTDataSource.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDCTDataSource.a;
+			remoteRef = 2442D79F192CE91600147117 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2442D7A2192CE91600147117 /* DCTDataSource Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DCTDataSource Demo.app";
+			remoteRef = 2442D7A1192CE91600147117 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2442D7A4192CE91600147117 /* DCTDataSource Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "DCTDataSource Tests.xctest";
+			remoteRef = 2442D7A3192CE91600147117 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		2442D722192CE01D00147117 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2442D73A192CE01D00147117 /* Images.xcassets in Resources */,
+				2442D77A192CE6D100147117 /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,12 +345,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2442D77D192CE79600147117 /* GroupsViewController.m in Sources */,
 				2442D775192CE68C00147117 /* Event.m in Sources */,
 				2442D738192CE01D00147117 /* AppDelegate.m in Sources */,
 				2442D778192CE68C00147117 /* Group.m in Sources */,
 				2442D734192CE01D00147117 /* main.m in Sources */,
 				2442D777192CE68C00147117 /* _Group.m in Sources */,
 				2442D776192CE68C00147117 /* _Event.m in Sources */,
+				2442D789192CE82000147117 /* EventViewController.m in Sources */,
+				2442D786192CE81300147117 /* EventsViewController.m in Sources */,
 				2442D76A192CE0FC00147117 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +446,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = "ManagedObjectDeletionTest/ManagedObjectDeletionTest-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -293,6 +459,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = "ManagedObjectDeletionTest/ManagedObjectDeletionTest-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
