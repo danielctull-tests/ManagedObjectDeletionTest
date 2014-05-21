@@ -1,0 +1,3 @@
+[submodule "mogenerator"]
+	path = mogenerator
+	url = git@github.com:danielctull-forks/mogenerator-binary.git
