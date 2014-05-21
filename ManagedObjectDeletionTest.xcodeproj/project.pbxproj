@@ -14,6 +14,10 @@
 		2442D738192CE01D00147117 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442D737192CE01D00147117 /* AppDelegate.m */; };
 		2442D73A192CE01D00147117 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2442D739192CE01D00147117 /* Images.xcassets */; };
 		2442D76A192CE0FC00147117 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2442D768192CE0FC00147117 /* Model.xcdatamodeld */; };
+		2442D775192CE68C00147117 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442D76D192CE68C00147117 /* Event.m */; };
+		2442D776192CE68C00147117 /* _Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442D770192CE68C00147117 /* _Event.m */; };
+		2442D777192CE68C00147117 /* _Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442D772192CE68C00147117 /* _Group.m */; };
+		2442D778192CE68C00147117 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442D774192CE68C00147117 /* Group.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,14 @@
 		2442D739192CE01D00147117 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2442D740192CE01D00147117 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2442D769192CE0FC00147117 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		2442D76C192CE68C00147117 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		2442D76D192CE68C00147117 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		2442D76F192CE68C00147117 /* _Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Event.h; sourceTree = "<group>"; };
+		2442D770192CE68C00147117 /* _Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Event.m; sourceTree = "<group>"; };
+		2442D771192CE68C00147117 /* _Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Group.h; sourceTree = "<group>"; };
+		2442D772192CE68C00147117 /* _Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Group.m; sourceTree = "<group>"; };
+		2442D773192CE68C00147117 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		2442D774192CE68C00147117 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +93,32 @@
 				2442D72F192CE01D00147117 /* ManagedObjectDeletionTest-Info.plist */,
 				2442D733192CE01D00147117 /* main.m */,
 				2442D768192CE0FC00147117 /* Model.xcdatamodeld */,
+				2442D76B192CE68C00147117 /* Model */,
 			);
 			path = ManagedObjectDeletionTest;
+			sourceTree = "<group>";
+		};
+		2442D76B192CE68C00147117 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2442D76E192CE68C00147117 /* Generated */,
+				2442D76C192CE68C00147117 /* Event.h */,
+				2442D76D192CE68C00147117 /* Event.m */,
+				2442D773192CE68C00147117 /* Group.h */,
+				2442D774192CE68C00147117 /* Group.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2442D76E192CE68C00147117 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				2442D76F192CE68C00147117 /* _Event.h */,
+				2442D770192CE68C00147117 /* _Event.m */,
+				2442D771192CE68C00147117 /* _Group.h */,
+				2442D772192CE68C00147117 /* _Group.m */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2442D775192CE68C00147117 /* Event.m in Sources */,
 				2442D738192CE01D00147117 /* AppDelegate.m in Sources */,
+				2442D778192CE68C00147117 /* Group.m in Sources */,
 				2442D734192CE01D00147117 /* main.m in Sources */,
+				2442D777192CE68C00147117 /* _Group.m in Sources */,
+				2442D776192CE68C00147117 /* _Event.m in Sources */,
 				2442D76A192CE0FC00147117 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
