@@ -36,8 +36,6 @@
 	NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
 	managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
 
-	self.managedObjectContext = managedObjectContext;
-
 	// Make a group
 	Group *group = [Group insertInManagedObjectContext:managedObjectContext];
 	group.name = @"Test";
@@ -46,47 +44,22 @@
 	event.date = [NSDate new];
 	event.group = group;
 
-	[managedObjectContext obtainPermanentIDsForObjects:@[group, event] error:NULL];
-
-	GroupID *groupID = group.objectID;
-
 	BOOL didSave = [managedObjectContext save:&error];
 	NSAssert(didSave, @"Received error: %@", error);
 
-	// Turn the group into a fault
-	[managedObjectContext reset];
+	[managedObjectContext deleteObject:group];
 
-	// Delete the group on different context
-	NSManagedObjectContext *backgroundContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-	backgroundContext.persistentStoreCoordinator = persistentStoreCoordinator;
+	BOOL didSave2 = [managedObjectContext save:&error];
+	NSAssert(didSave2, @"Received error: %@", error);
 
-	NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-	[defaultCenter addObserver:self selector:@selector(merge:) name:NSManagedObjectContextDidSaveNotification object:backgroundContext];
+	NSLog(@"group: %@", group);
+	NSLog(@"event: %@", event);
 
-
-	[backgroundContext performBlock:^{
-
-		NSError *error;
-		NSManagedObject *groupToDelete = [backgroundContext existingObjectWithID:groupID error:&error];
-		NSAssert(groupToDelete, @"Received error: %@", error);
-
-		[backgroundContext deleteObject:groupToDelete];
-
-		BOOL didSave = [backgroundContext save:&error];
-		NSAssert(didSave, @"Received error: %@", error);
-
-		[managedObjectContext performBlock:^{
-
-			NSLog(@"group: %@", group);
-			NSLog(@"event: %@", event);
-
-			// Try to access properties
-			NSLog(@"group.name: %@", group.name);
-			NSLog(@"group.events: %@", group.events);
-			NSLog(@"event.date: %@", event.date);
-			NSLog(@"event.group: %@", event.group);
-		}];
-	}];
+	// Try to access properties
+	NSLog(@"group.name: %@", group.name);
+	NSLog(@"group.events: %@", group.events);
+	NSLog(@"event.date: %@", event.date);
+	NSLog(@"event.group: %@", event.group);
 
 	return YES;
 }
