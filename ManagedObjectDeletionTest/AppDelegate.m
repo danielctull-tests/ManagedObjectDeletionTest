@@ -38,36 +38,36 @@
 
 	self.managedObjectContext = managedObjectContext;
 
-    // Make a group
-    Group *group = [Group insertInManagedObjectContext:managedObjectContext];
-    group.name = @"Test";
+	// Make a group
+	Group *group = [Group insertInManagedObjectContext:managedObjectContext];
+	group.name = @"Test";
 
 	Event *event = [Event insertInManagedObjectContext:managedObjectContext];
 	event.date = [NSDate new];
 	event.group = group;
 
-    [managedObjectContext obtainPermanentIDsForObjects:@[group, event] error:NULL];
+	[managedObjectContext obtainPermanentIDsForObjects:@[group, event] error:NULL];
 
-    GroupID *groupID = group.objectID;
+	GroupID *groupID = group.objectID;
 
 	BOOL didSave = [managedObjectContext save:&error];
 	NSAssert(didSave, @"Received error: %@", error);
 
-    // Turn the group into a fault
+	// Turn the group into a fault
 	[managedObjectContext reset];
 
-    // Delete the group on different context
-    NSManagedObjectContext *backgroundContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-    backgroundContext.persistentStoreCoordinator = persistentStoreCoordinator;
+	// Delete the group on different context
+	NSManagedObjectContext *backgroundContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+	backgroundContext.persistentStoreCoordinator = persistentStoreCoordinator;
 
 	NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
 	[defaultCenter addObserver:self selector:@selector(merge:) name:NSManagedObjectContextDidSaveNotification object:backgroundContext];
 
 
-    [backgroundContext performBlock:^{
+	[backgroundContext performBlock:^{
 
-        NSError *error;
-        NSManagedObject *groupToDelete = [backgroundContext existingObjectWithID:groupID error:&error];
+		NSError *error;
+		NSManagedObject *groupToDelete = [backgroundContext existingObjectWithID:groupID error:&error];
 		NSAssert(groupToDelete, @"Received error: %@", error);
 
 		[backgroundContext deleteObject:groupToDelete];
@@ -84,9 +84,9 @@
 			NSLog(@"%@", event.date);
 			NSLog(@"%@", event.group);
 		}];
-    }];
+	}];
 
-    return YES;
+	return YES;
 }
 
 - (void)merge:(NSNotification *)notification {
