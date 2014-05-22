@@ -77,12 +77,14 @@
 
 		[managedObjectContext performBlock:^{
 
-			NSLog(@"%@", group);
-			NSLog(@"%@", event);
+			NSLog(@"group: %@", group);
+			NSLog(@"event: %@", event);
 
 			// Try to access properties
-			NSLog(@"%@", event.date);
-			NSLog(@"%@", event.group);
+			NSLog(@"group.name: %@", group.name);
+			NSLog(@"group.events: %@", group.events);
+			NSLog(@"event.date: %@", event.date);
+			NSLog(@"event.group: %@", event.group);
 		}];
 	}];
 
