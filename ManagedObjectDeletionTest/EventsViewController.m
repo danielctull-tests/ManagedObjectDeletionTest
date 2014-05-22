@@ -37,6 +37,11 @@
 	self.title = self.group.name;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	[self.managedObjectContext refreshObject:self.group mergeChanges:NO];
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 

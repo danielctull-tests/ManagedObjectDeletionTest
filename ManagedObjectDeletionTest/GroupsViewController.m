@@ -33,7 +33,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
+	return;
 	NSFetchRequest *fetchRequest =[[NSFetchRequest alloc] initWithEntityName:[Group entityName]];
 	fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:GroupAttributes.name ascending:YES]];
 

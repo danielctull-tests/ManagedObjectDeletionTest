@@ -484,6 +484,7 @@
 				2442D752192CE01D00147117 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

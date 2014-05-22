@@ -8,6 +8,12 @@
 
 @implementation Group
 
-// Custom logic goes here.
+- (NSString *)description {
+	return [NSString stringWithFormat:@"<%@: %p; isFault = %@; isDeleted = %@>",
+			NSStringFromClass([self class]),
+			self,
+			@(self.isFault),
+			@(self.isDeleted)];
+}
 
 @end
